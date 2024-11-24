@@ -1,17 +1,12 @@
+import { getUser } from "@/queries/user";
 import { TodoList } from "@/components/todo-list";
 import { Separator } from "@/components/ui/separator";
-import { createClient } from "@/utils/supabase/server";
 import { redirect } from "next/navigation";
 
 export default async function TodosPage() {
-  const supabase = await createClient();
-
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
-
+  const user = await getUser();
   if (!user) {
-    return redirect("/login");
+    return redirect("/sign-in");
   }
 
   const todos = ["This is a todo"];

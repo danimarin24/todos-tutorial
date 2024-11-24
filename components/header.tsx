@@ -1,4 +1,4 @@
-import { signOut } from "@/app/login/actions";
+import { signOut } from "@/app/(login)/actions";
 import { Button } from "@/components/ui/button";
 import { createClient } from "@/utils/supabase/server";
 import Link from "next/link";
@@ -27,7 +27,7 @@ export default async function Header() {
             </form>
           ) : (
             <Button asChild>
-              <Link href="/login">Sign In</Link>
+              <Link href="/sign-in">Sign In</Link>
             </Button>
           )}
         </div>
