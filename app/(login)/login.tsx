@@ -35,12 +35,12 @@ export function Login({ mode = "signin" }: { mode?: "signin" | "signup" }) {
   >(signInWithMagicLink, { error: "", success: "" });
 
   return (
-    <div className="min-h-[100dvh] bg-gradient-to-b from-white to-gray-50 flex items-center justify-center px-4 py-16 sm:px-6 lg:px-8">
-      <div className="w-full max-w-md">
-        <h1 className="mt-10 text-2xl font-semibold tracking-tight text-center text-gray-900">
+    <div className="min-h-[100dvh] w-96 flex items-center justify-center px-4 py-16 sm:px-6 lg:px-8">
+      <div className="w-full max-w-lg bg-primary p-4 rounded-lg">
+        <h1 className="mt-10 text-2xl font-semibold tracking-tight text-center text-gray-200">
           {mode === "signin" ? "Welcome back" : "Create your account"}
         </h1>
-        <p className="mt-2 text-sm text-center text-gray-600">
+        <p className="mt-2 text-sm text-center text-gray-400">
           {mode === "signin"
             ? "Sign in to continue to your account"
             : "Get started with your new account"}
@@ -81,10 +81,10 @@ export function Login({ mode = "signin" }: { mode?: "signin" | "signup" }) {
 
               <div className="relative">
                 <div className="flex absolute inset-0 items-center">
-                  <div className="w-full border-t border-gray-200" />
+                  <div className="w-full border-t border-primary" />
                 </div>
                 <div className="flex relative justify-center">
-                  <span className="px-4 text-sm text-gray-500 bg-gradient-to-b from-white to-gray-50">
+                  <span className="px-4 text-sm text-gray-400 bg-gradient-to-b">
                     or
                   </span>
                 </div>
@@ -121,7 +121,7 @@ export function Login({ mode = "signin" }: { mode?: "signin" | "signup" }) {
             </div>
           )}
 
-          <p className="mt-8 text-sm text-center text-gray-600">
+          <p className="mt-8 text-sm text-center text-gray-200">
             {mode === "signin"
               ? "New to our platform? "
               : "Already have an account? "}
