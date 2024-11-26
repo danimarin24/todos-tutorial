@@ -5,7 +5,7 @@ const config = {
   domainName:
     process.env.NODE_ENV === "development"
       ? "http://localhost:3000"
-      : "http://localhost:3000",
+      : "https://todos-tutorial.danimarin.dev",
 };
 
 export default config;
